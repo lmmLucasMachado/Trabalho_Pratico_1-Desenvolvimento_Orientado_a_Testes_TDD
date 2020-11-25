@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import app.Read;
 
-public class falsificacao {
+public class Falsificacao {
 	
 	private Read read;
 	
