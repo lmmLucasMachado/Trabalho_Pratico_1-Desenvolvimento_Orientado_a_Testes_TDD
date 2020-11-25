@@ -1,13 +1,12 @@
 package app;
 
 public class App {
-   	private static Read read;
+	
 
     public static void main (String[]args){
-    	String name = "analysisTime";
-    	String name2 = "totalTime";
-    	
-    	String arq= read.read_data(name);
+    	private static Read read;
+    
+    	String arq= read.read_data();
     	
     	System.out.println(arq);
 

@@ -12,7 +12,7 @@ public class Falsificacao {
 	
 	@Test
 	public void read_data_test() {
-		String data = read.read_data("analysisTime"));
+		String data = read.read_data());
 		int size;
 		size = data.length();
 		
@@ -21,7 +21,7 @@ public class Falsificacao {
 	
 	@Test
 	public void read_data_test_fail() {
-		String data =  read.read_data("arquivo_errado");
+		String data =  read.read_data();
 		int size;
 		size = data.length();
 		
