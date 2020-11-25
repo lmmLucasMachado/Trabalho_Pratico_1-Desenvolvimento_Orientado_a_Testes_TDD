@@ -4,10 +4,12 @@ public class App {
    	private static Read read;
 
     public static void main (String[]args){
-    	String arq= read.read_data();
+    	String name = "analysisTime";
+    	String name2 = "totalTime";
     	
-    	System.out.println(arq.length());
+    	String arq= read.read_data(name);
     	
+    	System.out.println(arq);
 
     }
 }
