@@ -1,11 +1,12 @@
-import java.io.*;
+package app;
+
 import java.util.Scanner;
+import java.io.*;
 
-
-public class Test{
+public class Read{
 
     static String arq = "";
-
+    static int bf = 1;
     public static String read_data(){
 
     	 System.out.println("Escolha qual dos arquivos quer:");
@@ -13,8 +14,6 @@ public class Test{
          System.out.println("2 - totalTime.out");
          
          Scanner read = new Scanner(System.in);
-
-         int bf;
          bf = read.nextInt();
 
          String name = "";
@@ -23,8 +22,6 @@ public class Test{
          }else if(bf == 2){
              name = "totalTime";
          }    	
-    	
-        String  name = "analysisTime";
 
         name = "./../doc/"+name+".out";
         System.out.println(name);
@@ -37,7 +34,7 @@ public class Test{
                 arq += linha + "\n";
             }
             buffer.close();
-            System.out.println(arq);
+            //System.out.println(arq);
         }catch(IOException ioe){
         	System.out.println("ArquivoNaoEncontradoException");
             ioe.printStackTrace();
@@ -48,4 +45,16 @@ public class Test{
         
         return arq;
     }
+    
+    public static String get_name_arq(){
+        String name = "";
+        if (bf == 1){
+            name = "/analysisTimeTab.out";
+        }else if(bf == 2){
+            name = "/totalTimeTab.out";
+        }   
+    	
+    	return name;
+    }
+
 }
