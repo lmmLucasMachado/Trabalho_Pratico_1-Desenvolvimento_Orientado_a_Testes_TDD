@@ -2,13 +2,11 @@ package app;
 
 public class App {
 	
+	private static Write write;
 
     public static void main (String[]args){
-    	private static Read read;
     
-    	String arq= read.read_data();
+    	write.parser_write_data();
     	
-    	System.out.println(arq);
-
     }
 }
