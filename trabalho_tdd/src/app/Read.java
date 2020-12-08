@@ -5,23 +5,33 @@ import java.io.*;
 
 public class Read{
 
-    static String arq = "";
+    static String read_arq = "";
     static int bf = 1;
-    public static String read_data(){
+	private static Persistencia arq;
 
-    	 System.out.println("Escolha qual dos arquivos quer:");
+    public static void read_data(){
+
+    	 System.out.println("Escolha qual dos arquivos deseja realizar a analise:");
          System.out.println("1 - analysisTime.out");
          System.out.println("2 - totalTime.out");
-         
+
          Scanner read = new Scanner(System.in);
          bf = read.nextInt();
 
-         String name = "";
+         read_data_extract();
+        
+         arq.setArq(read_arq);
+        
+    }
+
+	public static void read_data_extract() {
+		
+		String name = "";
          if (bf == 1){
              name = "analysisTime";
          }else if(bf == 2){
              name = "totalTime";
-         }    	
+         }
 
         name = "./../doc/"+name+".out";
         System.out.println(name);
@@ -31,21 +41,16 @@ public class Read{
 
             while(buffer.ready()){
                 String linha = buffer.readLine();
-                arq += linha + "\n";
+                read_arq += linha + "\n";
             }
             buffer.close();
-            //System.out.println(arq);
         }catch(IOException ioe){
         	System.out.println("ArquivoNaoEncontradoException");
             ioe.printStackTrace();
         }
         
-        //arq = "---------- Evolution 1 ----------\n439\n705\n738\n729";
-        //System.out.println(arq.length());
-        
-        return arq;
-    }
-    
+	}
+
     public static String get_name_arq(){
         String name = "";
         if (bf == 1){
@@ -53,7 +58,7 @@ public class Read{
         }else if(bf == 2){
             name = "/totalTimeTab.out";
         }   
-    	
+ 
     	return name;
     }
 
