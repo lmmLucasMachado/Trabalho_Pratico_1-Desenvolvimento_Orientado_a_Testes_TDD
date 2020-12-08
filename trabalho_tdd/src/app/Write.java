@@ -34,10 +34,10 @@ public class Write {
         Scanner read = new Scanner(System.in);
         String path = read.next();
 
-        write_data(path);
+        write_data_extract(path);
 	}
 	
-	public static void write_data(String path){// throws IOException {
+	public static void write_data_extract(String path){// throws IOException {
         Scanner read = new Scanner(System.in);
         String separator;
         
