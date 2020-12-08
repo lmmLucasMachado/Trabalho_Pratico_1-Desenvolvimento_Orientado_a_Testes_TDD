@@ -20,15 +20,6 @@ public class Write {
                 j++;
             }
         }
-        /*
-        for (int l = 0; l < i; l++){  
-	        for (int c = 0; c < j; c++){ 
-	            System.out.print(data[l][c]); //imprime caracter a caracter
-	            System.out.print(" "); 
-	        }
-	        System.out.println(" "); //muda de linha
-        }
-        */
 
         System.out.println("Digite o caminho onde o arquivo sera armazenado:");
         Scanner read = new Scanner(System.in);
