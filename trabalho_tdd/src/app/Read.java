@@ -5,9 +5,9 @@ import java.io.*;
 
 public class Read{
 
-    static String arq = "";
+    static String read_arq = "";
     static int bf = 1;
-    public static String read_data(){
+    public static void read_data(){
 
     	 System.out.println("Escolha qual dos arquivos deseja realizar a analise:");
          System.out.println("1 - analysisTime.out");
@@ -18,7 +18,8 @@ public class Read{
 
          read_data_extract();
         
-        return arq;
+         setArqread_arq();
+        
     }
 
 	public static void read_data_extract() {
@@ -38,7 +39,7 @@ public class Read{
 
             while(buffer.ready()){
                 String linha = buffer.readLine();
-                arq += linha + "\n";
+                read_arq += linha + "\n";
             }
             buffer.close();
             //System.out.println(arq);
